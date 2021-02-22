@@ -11,10 +11,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import { PersonModule } from './person/person.module';
 import { ProductModule } from './product/product.module';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MaterialModule } from './material/material.module';
 import { AngularFireModule } from '@angular/fire';
-import { environment } from 'src/environments/environment';
+import { environment } from '../environments/environment';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
