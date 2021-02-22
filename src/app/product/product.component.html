@@ -1,1 +1,43 @@
-<p>product works!</p>
+<div class="row">
+  <form [formGroup]="form" (ngSubmit)="newPerson(form.value, this.documentId)">
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <!-- <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput  formControlName="id">
+          </mat-form-field>
+        </td> -->
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="name">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Url</mat-label>
+            <input matInput formControlName="url">
+          </mat-form-field>
+        </td>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Guardar</button>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px">
+    <div fxFlex="25%" *ngFor="let product of products">
+      <mat-card class="mat-elevation-z4" >
+        <mat-card-header>
+          <mat-card-title>{{product.data.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="product.data.url">
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="deletePerson(product.id)" >Eliminar</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  </div>

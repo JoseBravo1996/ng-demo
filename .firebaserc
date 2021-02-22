@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ng-demo-c8fa5": {
+      "hosting": {
+        "ng-demo": [
+          "ng-demo-c8fa5"
+        ]
+      }
+    }
+  }
+}
