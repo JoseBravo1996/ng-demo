@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-demo';
+
+
+  open(menu: any) {
+    menu.openMenu();
+  }
 }
